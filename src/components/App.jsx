@@ -18,10 +18,10 @@ export const App = () => {
   });
   const [filter, setFilter] = useState('');
 
-  useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(this.state.contacts))
-  }
-)
+   useEffect(() => {
+    localStorage.setItem('contacts', JSON.stringify(contacts));
+   }, [contacts]);
+  
 
 const addContact = ({ name, number }) => {
   const normalizedFind = name.toLowerCase();
@@ -90,10 +90,5 @@ const addContact = ({ name, number }) => {
 export default App;
   
   
-
-
-
-
-
 
   
