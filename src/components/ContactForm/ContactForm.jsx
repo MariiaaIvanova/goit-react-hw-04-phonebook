@@ -21,13 +21,15 @@ export default function ContactForm({ onSubmit }) {
 
 const handleSubmit = event => {
    event.preventDefault();
-    onSubmit({ name, number });
-  // reset();
+   onSubmit({ 
+     name, 
+     number });
+   reset();
   };
-//  const reset = () => {
-//     setName('');
-//     setNumber('');
-//   };
+const reset = () => {
+     setName('');
+     setNumber('');
+};
 
     return (
       <Form onSubmit={handleSubmit}>
